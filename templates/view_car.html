@@ -1,0 +1,28 @@
+<html>
+
+<head>
+	<title>Car Details</title>
+</head>
+
+<body>
+	<h2> Car Details Preview</h2>
+	<form action="#"  th:action="@{/savecar}" th:object="${newcar}" method="post">
+	<table class="table table-striped table-primary">
+				<tr><td>Fuel Type:<Input  th:value="${session.cfuel}" name="carfuel" id="carfuel" required /></td></tr>
+				<tr><td>Car Image:<Input th:value="${session.cimage}" name="carimage" id="carimage"/></td></tr>
+				<tr><td>Car Model<Input th:value="${session.cmodel}" name="carmodel" id="carmodel"/></td></tr>
+				<tr><td>Car Reg No:<Input  th:value="${session.cregno}" name="carregno" id="carregno" /></td></tr>
+				<tr><td>Car Rent:<Input th:value="${session.crent}" name="carrent" id="carrent"/></td></tr>
+				<tr><td>Car Status:<Input th:value="${session.cstatus}" name="carstatus" id="carstatus"/></td></tr>
+				
+				
+						<tr>
+					<td colspan="2"><button type="submit">Confirm</button></td>
+				</tr>
+	</table>
+	</form>
+
+</body>
+
+
+</html>

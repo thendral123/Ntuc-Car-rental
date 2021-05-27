@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>NTUC Cars</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<body>
+  <div class="container-scroller">
+   <div th:replace="common :: headersidebar"></div>	
+   
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+     
+      <!-- partial -->
+           <div class="main-panel">
+        <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">New Customer Registration Form</h4>
+                  <form class="form-sample" th:action="@{/previewcustomer}">
+                    <p class="card-description">
+                      Personal info
+                    </p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Customer Name</label>
+                          <div class="col-sm-9">
+                            <input type="text" id="cname" name="custname" placeholder="Required and must be of length 5 to 12" onblur="namevalidation(event)" onkeyup="namevalidation(event)" class="form-control"  />
+                          	 <span style="color:red"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Email</label>
+                          <div class="col-sm-9">
+                            <input type="text" id="cemail" name="custemail" placeholder="Required. Must be a valid email." onblur="emailvalidation(event)" class="form-control" />
+                          	
+                        <span style="color:red"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+					 <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Password</label>
+                          <div class="col-sm-9">
+                            <input type="text" id="cpswd" name="custpswd" placeholder="Required and must be of length 7 to 12" onblur="pswdvalidation(event)" onkeyup="pswdvalidation(event)" class="form-control" />
+                         	<span style="color:red"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Hand Phone no</label>
+                          <div class="col-sm-9">
+                            <input type="text" id="chpno" name="custhpno" placeholder="Enter valid mobile number" onblur="phonevalidation(event)" onkeyup="phonevalidation(event)" class="form-control" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+				
+					 <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">NRIC No</label>
+                          <div class="col-sm-9">
+                            <input type="text" id="cic" name="custic" placeholder="Enter your NRIC number" class="form-control" />
+                          </div>
+                        </div>
+                      </div>
+					  <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Address</label>
+                          <div class="col-sm-9">
+                            <input type="text" id="cadrs" name="custadrs" placeholder="Write your Address" class="form-control" />
+                          </div>
+                        </div>
+                      </div>
+                       <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">License No</label>
+                          <div class="col-sm-9">
+                            <input type="text" id="clicno" name="custlicno" placeholder="Enter Licesence Number" class="form-control" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+					 
+                     <div class="form-check form-check-flat form-check-primary">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                        Remember me
+                      </label>
+                    </div>
+					<div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+					</div>
+                  
+                  </form>
+                    
+                   
+                  
+                      </div>
+                    </div>
+               
+                </div>
+              </div>
+            </div>
+  
+        
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+   
+      <!-- main-panel ends -->
+   
+    <!-- page-body-wrapper ends -->
+ 
+  <!-- container-scroller -->
+
+<script>
+
+ function namevalidation(e) {
+            if (e.target.value === "" || e.target.value === null || /[^a-zA-Z]/.test(e.target.value)) {
+                e.target.nextElementSibling.innerHTML = "Name is required and alphabets only";
+            }
+            else {
+
+                e.target.nextElementSibling.innerHTML = "";
+            }
+        }
+
+  function emailvalidation(e) {
+            if (e.target.value === "" || e.target.value === null || !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(e.target.value)) {
+                e.target.nextElementSibling.innerHTML = "Required. Must be a valid email.";
+            }
+            else {
+
+                e.target.nextElementSibling.innerHTML = "";
+            }
+        }
+  function pswdvalidation(e) {
+            if (e.target.value === "" || e.target.value === null || e.target.value.length < 7 || e.target.value.length > 12) {
+
+                e.target.nextElementSibling.innerHTML = "Password is required and should be of length 7 to 12";
+            }
+            else {
+                e.target.nextElementSibling.innerHTML = "";
+            }
+        }
+  function namevalidation(e) {
+            if (e.target.value === "" || e.target.value === null || e.target.value.length < 5 || /[^a-zA-Z]/.test(e.target.value)) {
+                e.target.nextElementSibling.innerHTML = "Name is required and alphabets only";
+            }
+            else {
+
+                e.target.nextElementSibling.innerHTML = "";
+            }
+        }
+        
+        
+   function phonevalidation(e){
+          if(e.target.value === "" || e.target.value === null || e.target.value.length == 8 || /^[0-9]+$/.test(e.target.value)) {
+          	 e.target.nextElementSibling.innerHTML = "Enter a Valid phone number";
+			}
+			 else {
+
+                e.target.nextElementSibling.innerHTML = "";
+            }
+          } 
+</script>
+
+
+
+
+
+
+
+
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+

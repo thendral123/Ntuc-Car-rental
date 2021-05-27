@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Search for car</h1>
+
+<form th:action="@{/findcar}" >
+  <label for="hiredate">Hire Date:</label>
+  <input type="date" id="hire_date" name="hiredate">
+  <label for="hiredate">Return Date:</label>
+  <input type="date" id="return_date" name="returndate">
+  <input type="submit">
+</form>
+
+</body>
+</html>
